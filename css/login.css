@@ -1,0 +1,395 @@
+/* body setting */
+html {height: 100%;}
+
+body {
+    color: #666666;
+    font-family: 'helvetica', 'Roboto', sans-serif;
+    font-size: 13px;
+   /* background: rgba(226,231,236,1);
+    background: linear-gradient(to bottom, rgba(226,231,236,1) 0%, rgba(195,202,207,1) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% auto;*/
+}
+
+/* Form Module */
+.inputBox {
+    position: absolute;
+    background: #F4F4F4;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    width: 320px;
+    min-height: 250px;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.inputBox .inputBoxTitle{
+    border-radius: 4px 4px 0 0;
+    padding: 3px 12px 3px 12px;
+    height: auto;
+    background: rgba(248,248,248,1);
+    background: linear-gradient(to bottom, rgba(248,248,248,1) 0%, rgba(233,233,233,1) 100%);
+}
+
+.inputBox .fieldset {
+    padding: 13px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.inputBox .fieldset label{
+    margin-top: 10px;
+    display: block;
+    color: #333333;
+    font-weight: 600;
+}
+
+.inputBox .fieldset .required::after {
+    content: " *";
+    color: red;
+}
+
+.inputBox .fieldset input {
+    display: block;
+    outline: none;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 2px 0;
+}
+
+.inputBox .fieldset .missing {
+  border-color: red;
+}
+
+.inputBox input:focus {
+    border: 1px solid #33b5e5;
+    color: #333333;
+}
+
+.inputBox .submitButton {
+    display: block;
+    cursor: pointer;
+    background: linear-gradient(#42a1ec, #0070c9);
+    width: 100%;
+    border: 2px;
+    border-color: rgba(0, 0, 0, 1);
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 8px;
+    margin: 32px 0px;
+}
+
+.submitButton[disabled] {
+    opacity: 0.5;
+    cursor: initial;
+}
+
+input[type=checkbox]+label{
+    height: 24px;
+    line-height: 23px;
+    padding-left: 20px;
+    background-image: url(../img/checkbox-off.png);
+    background-size: 21px 21px;
+    background-position: -2px 0px;
+    background-repeat: no-repeat;
+}
+
+input[type=checkbox]:checked+label {
+    background-image: url(../img/checkbox-on.png);
+}
+
+.inputBox .fieldset input[type="checkbox"] {
+    display: inline;
+    opacity: 0;
+    margin: 0 0 0 0;
+    float: left;
+    cursor: default;
+    height: 0;
+}
+
+input:disabled, input[type=checkbox]:disabled+label  {
+    background-color: beige;
+    opacity: 0.7;
+}
+
+label.checkbox-label {
+    display: inline-block !important;
+
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border:0px;
+    top: 3px;
+    height: 15px;
+    width: 15px;
+    background: url("../img/icon_tooltip.png") no-repeat right top;
+    background-size: 14px 14px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    max-width: 360px;
+    border: 1px solid #bbb;
+    border-radius: 0px;
+    outline: 0;
+    box-shadow: none;
+    background-color: #fff;
+    color: #222;
+    padding: 10px 20px;
+    text-align: left;
+    white-space: normal;
+    line-height: 1.5;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+#oauth-container{
+  display: none;
+  margin-top: 5px;
+}
+
+.inputBox .fieldset .oauth-label{
+  display: inline-block;
+}
+.fieldset .left, .fieldset .right{
+  width: 49.5%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 30px 10px 30px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+#fm-native-login-dialog-separator{
+  margin-bottom: 15px;
+  position: relative;
+}
+.fm-native-login-dialog-separator-line {
+    width: 100%;
+    height: 1px;
+    background: #c8c8c8;
+    display: inline-block;
+    vertical-align: middle;
+}
+#oauth-required-label {
+  padding: 0px 10px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  background-color: #F4F4F4;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+}
+
+.oauth-btn {
+  display: block;
+  height: 40px;
+  width: 231px;
+  margin: 10px auto;
+  cursor: pointer;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 15px;
+  background-color: #fff;
+  font-size: 13px;
+  text-align: left;
+  text-indent: 45px;
+}
+
+button[data-provider-name=Amazon] {
+  background-image: url("../img/Amazon20x18@2x.png");
+}
+button[data-provider-name=Google] {
+  background-image: url("../img/Google20x18@2x.png");
+}
+button[data-provider-name~=Azure], button[data-provider-name~=Microsoft] {
+  background-image: url("../img/Microsoft20x18@2x.png");
+}
+
+#loginForm {
+  display : none
+}
+
+div.ui-dialog {
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background-color: #f5f5f5;
+
+}
+div.ui-dialog-titlebar{
+  height : 180;
+  background-color: #f2dede;
+    border-color: #ebcccc;
+    color: #a94442;
+}
+
+#missingParams {
+  padding: 30px ;
+  padding-top: 10px ;
+  padding-bottom: 10px ;
+  background-color: #f2dede;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  border-radius: 4px;
+  border-color: #ebcccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+#missingParams h3{
+  color : #a94442
+}
+
+/* ------------------------------------------------------------------------------------------
+ * Spinner
+ * ------------------------------------------------------------------------------------------ */
+
+#loader {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+ /* background-color: rgba(226, 226, 226, 0.8);*/
+  display: none;
+}
+
+#loader p {
+  padding-top: 80px;
+  margin-left: -4px;
+}
+
+.spinner {
+  margin: 300px 44%;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  top:0px;
+}
+
+.container1 > div, .container2 > div, .container3 > div {
+  width: 14px;
+  height: 14px;
+  background-color: #0088cc;
+  border-radius: 100%;
+  position: absolute;
+  -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+  animation: bouncedelay 1.2s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .spinner-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container2 {
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.container3 {
+  -webkit-transform: rotateZ(90deg);
+  transform: rotateZ(90deg);
+}
+
+.circle1 { top: 0; left: 0; }
+.circle2 { top: 0; right: 0; }
+.circle3 { right: 0; bottom: 0; }
+.circle4 { left: 0; bottom: 0; }
+
+.container2 .circle1 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.container3 .circle1 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.container1 .circle2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.container2 .circle2 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+.container3 .circle2 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+
+.container1 .circle3 {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+
+.container2 .circle3 {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+.container3 .circle3 {
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+
+.container1 .circle4 {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+
+.container2 .circle4 {
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+
+.container3 .circle4 {
+  -webkit-animation-delay: -0.1s;
+  animation-delay: -0.1s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
