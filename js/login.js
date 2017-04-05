@@ -55,7 +55,7 @@
                         d.password = credentials.password
                     }
                     var callBack = localStorage.getItem('callBack') + util.queryStringify(d)
-                    localStorage.setItem('callBack')
+                    localStorage.removeItem('callBack')
                     localStorage.removeItem('database')
                     localStorage.removeItem('layout')
                     location.replace(callBack)
